@@ -1,12 +1,14 @@
 {
-  "name": "QR-projekti",
+  "name": "qr-projekti",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://samibayar1.github.io/QR-quest/",
   "dependencies": {
+    "json": "^11.0.0",
     "qrcode.react": "^4.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
