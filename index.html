@@ -1,0 +1,18 @@
+import React, { useEffect, useState } from 'react';
+import QRCode from 'qrcode.react';
+
+const QRCodeGenerator = () => {
+    const [qrValue, setQrValue] = useState('');
+
+    useEffect(() => {
+        setQrValue('https://example.com/' + Math.random());
+    }, []);
+
+    return (
+        <div>
+            <QRCode value={qrValue} />
+        </div>
+    );
+};
+
+export default QRCodeGenerator;
