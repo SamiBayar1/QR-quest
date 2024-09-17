@@ -5,13 +5,18 @@ const QRCodeGenerator = () => {
     const [qrValue, setQrValue] = useState('');
 
     useEffect(() => {
-        setQrValue('https://github.com/SamiBayar1/QR-quest'); // Google.fi linkki
+        const newQrValue = 'https://samibayar1.github.io/QR-quest/'; // Varmista, että tämä URL on oikein
+        setQrValue(newQrValue);
     }, []);
 
     return (
         <div>
             <h1>QR-koodigeneraattori</h1>
-            <QRCodeCanvas value={qrValue} />
+            {qrValue ? (
+                <QRCodeCanvas value={qrValue} />
+            ) : (
+                <p>QR-koodia ei voida luoda, koska arvo puuttuu.</p>
+            )}
         </div>
     );
 };
